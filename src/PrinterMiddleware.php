@@ -35,7 +35,7 @@ final class PrinterMiddleware
         });
     }
 
-    public function __invoke(ServerRequestInterface $request, callable $next): PromiseInterface
+    public function __invoke(ServerRequestInterface $request): PromiseInterface
     {
         return $this->metrics->getMultiple($this->metricsList)->then(function ($metrics): ResponseInterface {
             $body = '';
