@@ -1,11 +1,11 @@
 # HTTP Middleware metrics Printer
 
-[![Linux Build Status](https://travis-ci.org/reactphp-inspector/react-inspector/http-middleware-printer.png)](https://travis-ci.org/reactphp-inspector/react-inspector/http-middleware-printer)
+![Continuous Integration](https://github.com/reactphp-inspector/http-middleware-printer/workflows/Continuous%20Integration/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/react-inspector/http-middleware-printer/v/stable.png)](https://packagist.org/packages/react-inspector/http-middleware-printer)
-[![Total Downloads](https://poser.pugx.org/react-inspector/http-middleware-printer/downloads.png)](https://packagist.org/packages/react-inspector/http-middleware-printer)
-[![Code Coverage](https://scrutinizer-ci.com/g/reactphp-inspector/react-inspector/http-middleware-printer/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/reactphp-inspector/react-inspector/http-middleware-printer/?branch=master)
+[![Total Downloads](https://poser.pugx.org/react-inspector/http-middleware-printer/downloads.png)](https://packagist.org/packages/react-inspector/http-middleware-printer/stats)
+[![Code Coverage](https://scrutinizer-ci.com/g/reactphp-inspector/http-middleware-printer/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/reactphp-inspector/http-middleware-printer/?branch=master)
+[![Type Coverage](https://shepherd.dev/github/reactphp-inspector/http-middleware-printer/coverage.svg)](https://shepherd.dev/github/reactphp-inspector/http-middleware-printer)
 [![License](https://poser.pugx.org/react-inspector/http-middleware-printer/license.png)](https://packagist.org/packages/react-inspector/http-middleware-printer)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/reactphp-inspector/react-inspector/http-middleware-printer/badge.svg)](https://travis-ci.org/reactphp-inspector/react-inspector/http-middleware-printer)
 
 ### Installation ###
 
