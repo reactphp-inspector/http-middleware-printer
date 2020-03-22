@@ -1,0 +1,13 @@
+parameters:
+	ignoreErrors:
+		- '#Method subscribe\(\) in anonymous class has parameter \$onCompleted with a nullable type declaration.#'
+		- '#Method subscribe\(\) in anonymous class has parameter \$onCompleted with null as default value.#'
+		- '#Method subscribe\(\) in anonymous class has parameter \$onError with a nullable type declaration.#'
+		- '#Method subscribe\(\) in anonymous class has parameter \$onError with null as default value.#'
+		- '#Method subscribe\(\) in anonymous class has parameter \$onNextOrObserver with null as default value.#'
+	ergebnis:
+		classesAllowedToBeExtended:
+			- InvalidArgumentException
+
+includes:
+	- vendor/wyrihaximus/async-test-utilities/rules.neon

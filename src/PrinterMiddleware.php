@@ -11,19 +11,18 @@ use ReactInspector\Metric;
 use ReactInspector\MetricsStreamInterface;
 use ReactInspector\Printer\Printer;
 use RingCentral\Psr7\Response;
+use function assert;
 
 final class PrinterMiddleware
 {
     private const TTL = 120;
 
-    /** @var Printer */
-    private $printer;
+    private Printer $printer;
 
-    /** @var CacheInterface */
-    private $metrics;
+    private CacheInterface $metrics;
 
-    /** @var array[string] */
-    private $metricsList = [];
+    /** @var array<string, string> */
+    private array $metricsList = [];
 
     public function __construct(Printer $printer, MetricsStreamInterface $metricsStream)
     {
@@ -37,11 +36,12 @@ final class PrinterMiddleware
 
     public function __invoke(ServerRequestInterface $request): PromiseInterface
     {
-        return $this->metrics->getMultiple($this->metricsList)->then(function ($metrics): ResponseInterface {
+        /** @psalm-suppress TooManyTemplateParams */
+        return $this->metrics->getMultiple($this->metricsList)->then(function (array $metrics): ResponseInterface {
             $body = '';
 
-            /** @var Metric $metric */
             foreach ($metrics as $metric) {
+                assert($metric instanceof Metric);
                 $body .= $this->printer->print($metric);
             }
 
