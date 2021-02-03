@@ -268,16 +268,16 @@
         },
         {
             "name": "react/cache",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
-                "reference": "44a568925556b0bd8cacc7b49fb0f1cf0d706a0c"
+                "reference": "4bf736a2cccec7298bdf745db77585966fc2ca7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/44a568925556b0bd8cacc7b49fb0f1cf0d706a0c",
-                "reference": "44a568925556b0bd8cacc7b49fb0f1cf0d706a0c",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/4bf736a2cccec7298bdf745db77585966fc2ca7e",
+                "reference": "4bf736a2cccec7298bdf745db77585966fc2ca7e",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-18T12:12:35+00:00"
+            "time": "2021-02-02T06:47:52+00:00"
         },
         {
             "name": "react/event-loop",
@@ -6053,12 +6053,12 @@
             "version": "1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
                 "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
                 "shasum": ""
             },
@@ -6101,12 +6101,12 @@
             "version": "4.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/glob.git",
+                "url": "https://github.com/webmozarts/glob.git",
                 "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "url": "https://api.github.com/repos/webmozarts/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
                 "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
                 "shasum": ""
             },
