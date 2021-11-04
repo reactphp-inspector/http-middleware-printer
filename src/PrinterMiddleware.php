@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace ReactInspector\Http\Middleware\Printer;
 
@@ -11,6 +13,7 @@ use ReactInspector\Metric;
 use ReactInspector\MetricsStreamInterface;
 use ReactInspector\Printer\Printer;
 use RingCentral\Psr7\Response;
+
 use function assert;
 
 final class PrinterMiddleware
@@ -29,6 +32,7 @@ final class PrinterMiddleware
         $this->printer = $printer;
         $this->metrics = new ArrayCache();
         $metricsStream->subscribe(function (Metric $metric): void {
+            /** @psalm-suppress TooManyTemplateParams */
             $this->metrics->set($metric->config()->name(), $metric, self::TTL);
             $this->metricsList[$metric->config()->name()] = $metric->config()->name();
         });

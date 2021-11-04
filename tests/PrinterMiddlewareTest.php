@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace ReactInspector\Tests\Http\Middleware\Printer;
 
@@ -16,6 +18,7 @@ use Rx\Disposable\EmptyDisposable;
 use Rx\DisposableInterface;
 use Rx\ObserverInterface;
 use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
+
 use function assert;
 use function is_callable;
 
@@ -31,10 +34,11 @@ final class PrinterMiddlewareTest extends AsyncTestCase
         $printer = $this->prophesize(Printer::class);
         $printer->print(Argument::type(Metric::class))->shouldBeCalled()->willReturn($metricsString);
 
-        $metrics = new class() implements MetricsStreamInterface {
+        $metrics = new class () implements MetricsStreamInterface {
             /**
              * @param callable|ObserverInterface|null $onNextOrObserver
              */
+            // phpcs:ignore SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
             public function subscribe($onNextOrObserver = null, ?callable $onError = null, ?callable $onCompleted = null): DisposableInterface
             {
                 if (is_callable($onNextOrObserver)) {
