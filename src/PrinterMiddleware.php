@@ -14,8 +14,6 @@ use ReactInspector\MetricsStreamInterface;
 use ReactInspector\Printer\Printer;
 use RingCentral\Psr7\Response;
 
-use function assert;
-
 final class PrinterMiddleware
 {
     private const TTL = 120;
@@ -45,7 +43,6 @@ final class PrinterMiddleware
             $body = '';
 
             foreach ($metrics as $metric) {
-                assert($metric instanceof Metric);
                 $body .= $this->printer->print($metric);
             }
 

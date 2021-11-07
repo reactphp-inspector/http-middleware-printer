@@ -37,8 +37,11 @@ final class PrinterMiddlewareTest extends AsyncTestCase
         $metrics = new class () implements MetricsStreamInterface {
             /**
              * @param callable|ObserverInterface|null $onNextOrObserver
+             *
+             * @phpstan-ignore-next-line
+             *
+             * phpcs:ignore SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
              */
-            // phpcs:ignore SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
             public function subscribe($onNextOrObserver = null, ?callable $onError = null, ?callable $onCompleted = null): DisposableInterface
             {
                 if (is_callable($onNextOrObserver)) {
